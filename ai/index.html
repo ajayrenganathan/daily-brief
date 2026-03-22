@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Daily Brief — Sunday, March 22, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --clr-bg:              #08080d;
+      --clr-bg-glow:         rgba(45, 212, 191, 0.04);
+      --clr-surface:         #111117;
+      --clr-surface-alt:     #1a1a23;
+      --clr-text:            #b8b8c4;
+      --clr-text-muted:      #5e5e6e;
+      --clr-heading:         #ededf0;
+      --clr-border:          #222232;
+      --clr-border-subtle:   #191925;
+      --clr-accent:          #2dd4bf;
+      --clr-accent-dim:      rgba(45, 212, 191, 0.7);
+      --clr-accent-glow:     rgba(45, 212, 191, 0.07);
+      --clr-today:           #2dd4bf;
+      --clr-today-bg:        rgba(45, 212, 191, 0.08);
+      --clr-week:            #a78bfa;
+      --clr-week-bg:         rgba(167, 139, 250, 0.06);
+      --clr-highlight:       #fbbf24;
+      --clr-highlight-bg:    rgba(251, 191, 36, 0.06);
+      --clr-highlight-border:rgba(251, 191, 36, 0.18);
+      --clr-new:             #38bdf8;
+      --clr-new-bg:          rgba(56, 189, 248, 0.07);
+      --clr-new-border:      rgba(56, 189, 248, 0.18);
+      --clr-card-hover:      #151520;
+      --font-display:        'Instrument Serif', Georgia, 'Times New Roman', serif;
+      --font-body:           'Outfit', system-ui, -apple-system, sans-serif;
+      --radius:              12px;
+      --radius-sm:           8px;
+      --shadow:              0 4px 24px rgba(0,0,0,0.35);
+      --shadow-sm:           0 2px 10px rgba(0,0,0,0.25);
+      --ease:                cubic-bezier(0.4, 0, 0.2, 1);
+      --transition:          0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --clr-bg:              #f5f2ee;
+        --clr-bg-glow:         rgba(13, 148, 136, 0.03);
+        --clr-surface:         #ffffff;
+        --clr-surface-alt:     #ece8e3;
+        --clr-text:            #4a453f;
+        --clr-text-muted:      #8a847e;
+        --clr-heading:         #1a1714;
+        --clr-border:          #ddd8d2;
+        --clr-border-subtle:   #e8e4de;
+        --clr-accent:          #0d9488;
+        --clr-accent-dim:      rgba(13, 148, 136, 0.7);
+        --clr-accent-glow:     rgba(13, 148, 136, 0.05);
+        --clr-today:           #0d9488;
+        --clr-today-bg:        rgba(13, 148, 136, 0.06);
+        --clr-week:            #7c3aed;
+        --clr-week-bg:         rgba(124, 58, 237, 0.05);
+        --clr-highlight:       #b45309;
+        --clr-highlight-bg:    rgba(180, 83, 9, 0.05);
+        --clr-highlight-border:rgba(180, 83, 9, 0.15);
+        --clr-new:             #0369a1;
+        --clr-new-bg:          rgba(3, 105, 161, 0.05);
+        --clr-new-border:      rgba(3, 105, 161, 0.15);
+        --clr-card-hover:      #faf8f5;
+        --shadow:              0 2px 12px rgba(0,0,0,0.06);
+        --shadow-sm:           0 1px 4px rgba(0,0,0,0.04);
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--clr-bg);
+      background-image: radial-gradient(ellipse 70% 40% at 50% -5%, var(--clr-bg-glow) 0%, transparent 100%);
+      color: var(--clr-text);
+      line-height: 1.65;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+    a { color: var(--clr-accent); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--clr-heading); }
+
+    .top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 900px; margin: 0 auto; padding: 0.75rem 1.25rem;
+      font-family: var(--font-body); font-size: 0.68rem; font-weight: 500;
+      color: var(--clr-text-muted); letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--clr-border-subtle); margin-bottom: 1.5rem;
+    }
+    .top-bar-updated { text-transform: uppercase; letter-spacing: 0.1em; }
+    .top-bar-updated time { color: var(--clr-text); font-weight: 600; }
+    .top-bar-label { text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; color: var(--clr-text-muted); }
+
+    .brief-header { text-align: center; padding: 2.5rem 1.5rem 2rem; margin-bottom: 2.25rem; position: relative; }
+    .brief-header::after { content: ''; display: block; width: 48px; height: 2px; background: var(--clr-accent); margin: 1.75rem auto 0; border-radius: 1px; }
+    .brief-edition { font-family: var(--font-body); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; color: var(--clr-accent); margin-bottom: 0.85rem; }
+    .brief-header h1 { font-family: var(--font-display); font-size: 3.4rem; font-weight: 400; color: var(--clr-heading); line-height: 1.05; letter-spacing: -0.01em; }
+    .brief-stats { display: flex; justify-content: center; gap: 3.5rem; margin-top: 1.75rem; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-value { display: block; font-family: var(--font-body); font-size: 2rem; font-weight: 800; color: var(--clr-heading); line-height: 1.15; }
+    .stat-value-accent { color: var(--clr-accent); }
+    .stat-label { font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--clr-text-muted); margin-top: 0.15rem; }
+
+    .topic-banner { display: flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1rem; margin-bottom: 1.5rem; background: var(--clr-highlight-bg); border: 1px solid var(--clr-highlight-border); border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--clr-highlight); flex-wrap: wrap; }
+    .topic-banner .label { font-weight: 700; letter-spacing: 0.02em; }
+    .topic-tag { display: inline-block; padding: 0.15rem 0.55rem; background: var(--clr-highlight-bg); border: 1px solid var(--clr-highlight-border); border-radius: 999px; font-size: 0.7rem; font-weight: 600; }
+
+    .filter-toolbar { display: flex; align-items: stretch; margin-bottom: 1.75rem; border-bottom: 1px solid var(--clr-border); position: relative; }
+    .tabs-nav { display: flex; gap: 0; overflow-x: auto; flex: 1; scrollbar-width: none; }
+    .tabs-nav::-webkit-scrollbar { display: none; }
+    .tab-btn { flex-shrink: 0; padding: 0.75rem 1.1rem; font-family: var(--font-body); font-size: 0.76rem; font-weight: 600; color: var(--clr-text-muted); background: none; border: none; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer; transition: all var(--transition); white-space: nowrap; letter-spacing: 0.01em; }
+    .tab-btn:hover { color: var(--clr-text); }
+    .tab-btn.active { color: var(--clr-accent); border-bottom-color: var(--clr-accent); }
+    .tab-btn .tab-count { display: inline-block; margin-left: 0.3rem; padding: 0.1rem 0.4rem; background: var(--clr-surface-alt); border-radius: 999px; font-size: 0.62rem; font-weight: 700; color: var(--clr-text-muted); transition: all var(--transition); }
+    .tab-btn.active .tab-count { background: var(--clr-accent); color: #fff; }
+
+    .filter-actions { display: flex; align-items: center; padding: 0 0.25rem; margin-left: auto; border-left: 1px solid var(--clr-border); padding-left: 0.75rem; }
+    .new-filter-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.38rem 0.85rem; font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; color: var(--clr-text-muted); background: transparent; border: 1px solid var(--clr-border); border-radius: 999px; cursor: pointer; transition: all var(--transition); white-space: nowrap; letter-spacing: 0.02em; }
+    .new-filter-btn:hover { color: var(--clr-new); border-color: var(--clr-new-border); background: var(--clr-new-bg); }
+    .new-filter-btn.active { color: #fff; background: var(--clr-new); border-color: var(--clr-new); }
+    .new-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--clr-new); transition: background var(--transition); flex-shrink: 0; }
+    .new-filter-btn.active .new-dot { background: #fff; }
+    .new-count { font-variant-numeric: tabular-nums; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .filter-empty { display: none; text-align: center; padding: 3rem 1rem; color: var(--clr-text-muted); }
+    .filter-empty-icon { font-size: 1.8rem; margin-bottom: 0.75rem; opacity: 0.4; }
+    .filter-empty p { font-size: 0.85rem; line-height: 1.6; }
+
+    .date-group { margin-bottom: 1.75rem; }
+    .date-group-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--clr-border-subtle); }
+    .date-badge { display: inline-block; padding: 0.18rem 0.6rem; border-radius: 999px; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+    .date-badge-today { background: var(--clr-today-bg); color: var(--clr-today); border: 1px solid rgba(45, 212, 191, 0.2); }
+    .date-badge-week { background: var(--clr-week-bg); color: var(--clr-week); border: 1px solid rgba(167, 139, 250, 0.15); }
+    .date-group-label { font-size: 0.78rem; font-weight: 500; color: var(--clr-text-muted); }
+
+    .article-card { display: block; padding: 1.1rem 1.3rem; margin-bottom: 0.5rem; background: var(--clr-surface); border: 1px solid var(--clr-border-subtle); border-radius: var(--radius-sm); transition: all var(--transition); text-decoration: none !important; color: inherit; position: relative; overflow: hidden; }
+    .article-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: transparent; transition: background var(--transition); }
+    .article-card:hover { background: var(--clr-card-hover); border-color: var(--clr-border); transform: translateX(3px); box-shadow: var(--shadow-sm); }
+    .article-card:hover::before { background: var(--clr-accent); }
+    .article-card[data-new="true"]::after { content: 'NEW'; position: absolute; top: 1.1rem; right: 1rem; font-size: 0.56rem; font-weight: 800; letter-spacing: 0.1em; color: var(--clr-new); background: var(--clr-new-bg); padding: 0.15rem 0.5rem; border-radius: 3px; border: 1px solid var(--clr-new-border); }
+    .article-card-title { font-size: 0.92rem; font-weight: 600; color: var(--clr-heading); margin-bottom: 0.25rem; line-height: 1.4; padding-right: 3.5rem; }
+    .article-card-meta { display: flex; align-items: center; gap: 0.6rem; font-size: 0.7rem; color: var(--clr-text-muted); margin-bottom: 0.3rem; }
+    .article-source { font-weight: 600; color: var(--clr-accent); }
+    .article-card-summary { font-size: 0.8rem; color: var(--clr-text-muted); line-height: 1.6; }
+
+    .highlight-card { display: block; padding: 1.35rem 1.5rem; margin-bottom: 0.6rem; background: var(--clr-surface); border: 1px solid var(--clr-border-subtle); border-radius: var(--radius-sm); transition: all var(--transition); text-decoration: none !important; color: inherit; position: relative; overflow: hidden; }
+    .highlight-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--clr-highlight); opacity: 0.5; transition: opacity var(--transition); }
+    .highlight-card:hover { background: var(--clr-card-hover); border-color: var(--clr-border); transform: translateX(3px); box-shadow: var(--shadow); }
+    .highlight-card:hover::before { opacity: 1; }
+    .highlight-card[data-new="true"]::after { content: 'NEW'; position: absolute; top: 1.35rem; right: 1.25rem; font-size: 0.56rem; font-weight: 800; letter-spacing: 0.1em; color: var(--clr-new); background: var(--clr-new-bg); padding: 0.15rem 0.5rem; border-radius: 3px; border: 1px solid var(--clr-new-border); }
+    .highlight-rank { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: var(--clr-highlight-bg); color: var(--clr-highlight); font-size: 0.62rem; font-weight: 800; border-radius: 50%; margin-right: 0.5rem; flex-shrink: 0; border: 1px solid var(--clr-highlight-border); }
+    .highlight-card-title { display: flex; align-items: center; font-size: 0.98rem; font-weight: 600; color: var(--clr-heading); margin-bottom: 0.4rem; line-height: 1.4; padding-right: 3.5rem; }
+    .highlight-card-ai-summary { font-size: 0.84rem; color: var(--clr-text); line-height: 1.65; margin-bottom: 0.5rem; padding-left: 0.85rem; border-left: 2px solid var(--clr-border); transition: border-color var(--transition); }
+    .highlight-card:hover .highlight-card-ai-summary { border-left-color: var(--clr-accent-dim); }
+    .highlight-card-meta { display: flex; align-items: center; gap: 0.6rem; font-size: 0.7rem; color: var(--clr-text-muted); }
+
+    .feed-error { display: block; padding: 0.65rem 1rem; margin-bottom: 1.25rem; background: var(--clr-highlight-bg); border: 1px solid var(--clr-highlight-border); border-radius: var(--radius-sm); font-size: 0.76rem; color: var(--clr-highlight); text-align: center; }
+
+    .brief-footer { text-align: center; padding: 3rem 1rem 1.5rem; font-size: 0.68rem; color: var(--clr-text-muted); letter-spacing: 0.02em; }
+    .brief-footer a { color: var(--clr-text-muted); }
+    .brief-footer a:hover { color: var(--clr-accent); }
+    .footer-rule { width: 32px; height: 1px; background: var(--clr-border); margin: 0 auto 1rem; }
+
+    @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .animate-in { animation: fadeSlideUp 0.45s var(--ease) both; }
+    .brief-header { animation: fadeSlideUp 0.55s var(--ease) both; }
+    .top-bar { animation: fadeIn 0.4s var(--ease) both; }
+    .filter-toolbar { animation: fadeSlideUp 0.5s 0.08s var(--ease) both; }
+    .highlight-card.animate-in:nth-child(1)  { animation-delay: 0.12s; }
+    .highlight-card.animate-in:nth-child(2)  { animation-delay: 0.17s; }
+    .highlight-card.animate-in:nth-child(3)  { animation-delay: 0.22s; }
+    .highlight-card.animate-in:nth-child(4)  { animation-delay: 0.27s; }
+    .highlight-card.animate-in:nth-child(5)  { animation-delay: 0.32s; }
+    .highlight-card.animate-in:nth-child(6)  { animation-delay: 0.37s; }
+    .highlight-card.animate-in:nth-child(7)  { animation-delay: 0.42s; }
+    .highlight-card.animate-in:nth-child(8)  { animation-delay: 0.47s; }
+    .highlight-card.animate-in:nth-child(9)  { animation-delay: 0.52s; }
+    .highlight-card.animate-in:nth-child(10) { animation-delay: 0.57s; }
+    .highlight-card.animate-in:nth-child(11) { animation-delay: 0.62s; }
+    .highlight-card.animate-in:nth-child(12) { animation-delay: 0.67s; }
+    .article-card.animate-in:nth-child(1)  { animation-delay: 0.08s; }
+    .article-card.animate-in:nth-child(2)  { animation-delay: 0.13s; }
+    .article-card.animate-in:nth-child(3)  { animation-delay: 0.18s; }
+    .article-card.animate-in:nth-child(4)  { animation-delay: 0.23s; }
+    .article-card.animate-in:nth-child(5)  { animation-delay: 0.28s; }
+    .article-card.animate-in:nth-child(6)  { animation-delay: 0.33s; }
+    .article-card.animate-in:nth-child(7)  { animation-delay: 0.38s; }
+    .article-card.animate-in:nth-child(8)  { animation-delay: 0.43s; }
+
+    body.filter-new .article-card:not([data-new="true"]),
+    body.filter-new .highlight-card:not([data-new="true"]) { display: none; }
+    body.filter-new .date-group-header { display: none; }
+    body.filter-new .empty-message { display: none; }
+
+    @media print {
+      body::after { display: none; }
+      body { background: #fff; color: #222; background-image: none; }
+      .top-bar, .filter-toolbar { display: none; }
+      .tab-panel { display: block !important; page-break-before: always; }
+      .tab-panel:first-of-type { page-break-before: auto; }
+      .article-card, .highlight-card { box-shadow: none; border: 1px solid #ddd; transform: none !important; }
+      .article-card::before, .highlight-card::before { display: none; }
+      .brief-header { background: none; }
+      .brief-header::after { background: #222; }
+    }
+    @media (max-width: 768px) {
+      .brief-header h1 { font-size: 2.6rem; }
+      .brief-stats { gap: 2.5rem; }
+      .stat-value { font-size: 1.6rem; }
+      .filter-toolbar { flex-direction: column; gap: 0; }
+      .filter-actions { border-left: none; border-top: 1px solid var(--clr-border-subtle); padding: 0.55rem 0; padding-left: 0; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 0.85rem 2rem; }
+      .top-bar { flex-direction: column; gap: 0.2rem; text-align: center; padding: 0.6rem 0.85rem; }
+      .brief-header { padding: 1.75rem 0.75rem 1.5rem; }
+      .brief-header h1 { font-size: 2.1rem; }
+      .brief-stats { gap: 1.75rem; margin-top: 1.25rem; }
+      .stat-value { font-size: 1.4rem; }
+      .tab-btn { padding: 0.6rem 0.8rem; font-size: 0.72rem; }
+      .article-card { padding: 0.9rem 1rem; }
+      .highlight-card { padding: 1rem 1.1rem; }
+      .highlight-card-title { font-size: 0.9rem; padding-right: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <span class="top-bar-updated">Last updated: <time>March 22, 2026 at 11:00 AM</time></span>
+    <span class="top-bar-label">AI Daily Brief</span>
+  </div>
+
+  <div class="container">
+
+    <header class="brief-header">
+      <div class="brief-edition">Sunday, March 22, 2026</div>
+      <h1>AI Daily Brief</h1>
+      <div class="brief-stats">
+        <div class="stat">
+          <span class="stat-value">35</span>
+          <span class="stat-label">Articles</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value stat-value-accent">12</span>
+          <span class="stat-label">Highlights</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">6</span>
+          <span class="stat-label">Feeds</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="topic-banner">
+      <span class="label">Highlighting:</span>
+      <span class="topic-tag">LLMs</span>
+      <span class="topic-tag">AI Agents</span>
+      <span class="topic-tag">Enterprise Deployment</span>
+      <span class="topic-tag">Agentic Coding</span>
+    </div>
+
+    <div class="filter-toolbar">
+      <nav class="tabs-nav" role="tablist">
+        <button class="tab-btn active" role="tab" onclick="switchTab('highlights')">Highlights <span class="tab-count">12</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-llm-watch')">LLM Watch <span class="tab-count">5</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-sebastian')">Sebastian Raschka <span class="tab-count">4</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-404media')">404 Media <span class="tab-count">4</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-aibusiness')">AI Business <span class="tab-count">6</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-infoq')">InfoQ AI/ML <span class="tab-count">5</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-nate')">Nate's Newsletter <span class="tab-count">5</span></button>
+      </nav>
+      <div class="filter-actions">
+        <button class="new-filter-btn" onclick="toggleNewFilter()" title="Show only new articles from today">
+          <span class="new-dot"></span>
+          New <span class="new-count">3</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-empty">
+      <div class="filter-empty-icon">&mdash;</div>
+      <p>No new articles in this section today.<br>Try another tab or clear the filter.</p>
+    </div>
+
+    <!-- ══════ HIGHLIGHTS ══════ -->
+    <div id="highlights" class="tab-panel active" role="tabpanel">
+
+      <a href="https://www.infoq.com/news/2026/03/google-multi-agent/" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">1</span>
+          Google Publishes Scaling Principles for Agentic Architectures
+        </div>
+        <div class="highlight-card-ai-summary">Google and MIT researchers reveal a predictive framework for scaling multi-agent systems, uncovering a tool-coordination trade-off that determines the optimal architecture for any given task. This gives enterprises a principled way to design agent systems instead of guessing.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">InfoQ AI/ML</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://www.infoq.com/news/2026/03/hubspot-ai-code-review-agent/" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">2</span>
+          HubSpot's Sidekick: Multi-Model AI Code Review with 90% Faster Feedback
+        </div>
+        <div class="highlight-card-ai-summary">HubSpot built an internal AI code review agent that cut time-to-first-feedback on PRs by 90% with 80% engineer approval. This is one of the clearest ROI stories for AI agents in software engineering — measurable, real-world, at scale.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">InfoQ AI/ML</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://aibusiness.com/agentic-ai/agent-365-microsoft-pumps-agentic-systems" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">3</span>
+          Microsoft Agent 365: Agentic AI Across the Enterprise Stack
+        </div>
+        <div class="highlight-card-ai-summary">Microsoft bakes agentic AI into the entire Microsoft 365 stack with Defender security, Entra identity, and Purview governance built in. This is the strongest signal yet that AI agents are becoming an infrastructure layer, not a standalone product.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">AI Business</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://www.infoq.com/news/2026/03/aws-strands-agents/" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">4</span>
+          AWS Launches Strands Labs for Experimental AI Agent Projects
+        </div>
+        <div class="highlight-card-ai-summary">AWS enters the agent framework race with Strands Labs and the open-source Strands Agents SDK. With Python and TypeScript support, this gives enterprises an AWS-native path to building production agents — completing the Big Three (Azure/AWS/GCP) agent platform story.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">InfoQ AI/ML</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://www.infoq.com/news/2026/03/agents-context-file-value-review/" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">5</span>
+          New Research Reassesses the Value of AGENTS.md Files for AI Coding
+        </div>
+        <div class="highlight-card-ai-summary">ETH Zurich research finds that LLM-generated AGENTS.md context files may actually hinder AI coding agents — a counterintuitive result that challenges common practices in agentic development workflows.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">InfoQ AI/ML</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://aibusiness.com/agentic-ai/enterprises-should-prioritize-governance-amid-agentic-ai-boom" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">6</span>
+          Enterprises Should Prioritize Governance Amid Agentic AI Boom
+        </div>
+        <div class="highlight-card-ai-summary">91% of organizations already use AI agents, but only 10% have effective governance. With 90% lacking a clear strategy for managing AI-related threats, governance has become the critical bottleneck between experimentation and production deployment.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">AI Business</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://aibusiness.com/agentic-ai/openai-s-latest-platform-targets-enterprise-customers" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">7</span>
+          OpenAI Launches Frontier Platform for Enterprise AI Agents
+        </div>
+        <div class="highlight-card-ai-summary">OpenAI's Frontier platform helps enterprises build, deploy, and manage AI agents by connecting them across corporate ecosystems. This positions OpenAI as a direct competitor to Microsoft and AWS in the enterprise agent platform market.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">AI Business</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">8</span>
+          A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan–Feb 2026
+        </div>
+        <div class="highlight-card-ai-summary">Sebastian Raschka's deep-dive covers 10 major open-weight LLM architectures released in early 2026, including Qwen3-Coder-Next which outperforms much larger models on coding tasks. The open-source LLM landscape is advancing faster than ever.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">Sebastian Raschka</span>
+          <span>Feb 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://www.llmwatch.com/p/ai-agents-of-the-week-papers-you-f11" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">9</span>
+          AI Agents of the Week: Key Research Papers You Should Know
+        </div>
+        <div class="highlight-card-ai-summary">New research shows even the best agents match human searchers in accuracy but rely on brute-force retrieval, and RL-trained agents can get trapped in low-information regimes. Important findings for anyone building production agent systems.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">LLM Watch</span>
+          <span>March 15, 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://natesnewsletter.substack.com/p/ai-news-that-matters-for-builders" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">10</span>
+          The Week AI Infrastructure Got Real
+        </div>
+        <div class="highlight-card-ai-summary">Nate's analysis of the week AI infrastructure moved from theory to practice — covering the real operational challenges enterprises face when deploying agents at scale, from coordination costs to platform lock-in risks.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">Nate's AI Newsletter</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://www.404media.co/scientists-are-increasingly-worried-ai-will-sway-elections/" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">11</span>
+          Scientists Are Increasingly Worried AI Will Sway Elections
+        </div>
+        <div class="highlight-card-ai-summary">Three new studies show AI models can meaningfully sway voters using misinformation while evading detection in public surveys. As AI agents become more autonomous, the intersection of AI capabilities and democratic integrity grows more urgent.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">404 Media</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://aibusiness.com/agentic-ai/agentic-ai-is-rewriting-the-rules-of-enterprise-planning" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">12</span>
+          Agentic AI Rewrites the Rules of Enterprise Planning
+        </div>
+        <div class="highlight-card-ai-summary">2026 marks the shift from experimentation to proving what works — enterprises are moving from building custom agents to licensing them, and from single agents to orchestrated meshes across end-to-end workflows.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">AI Business</span>
+          <span>March 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ══════ LLM WATCH ══════ -->
+    <div id="feed-llm-watch" class="tab-panel" role="tabpanel">
+      <div class="feed-error">⚠ Fetched via web search — dates and summaries may be approximate</div>
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-week">This Week</span>
+          <span class="date-group-label">March 15 – 22, 2026</span>
+        </div>
+        <a href="https://www.llmwatch.com/p/ai-agents-of-the-week-papers-you-f11" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">AI Agents of the Week: Papers You Should Know About</div>
+          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 15, 2026</span></div>
+          <div class="article-card-summary">Research on MADQA benchmark, information self-locking in RL-trained agents, and collective outcomes in agent populations.</div>
+        </a>
+        <a href="https://www.llmwatch.com/p/the-best-agent-nobody-is-talking" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">The Best AI Agent Nobody Is Talking About</div>
+          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
+          <div class="article-card-summary">Analysis of an under-the-radar AI agent that's outperforming better-known alternatives.</div>
+        </a>
+        <a href="https://www.llmwatch.com/p/llm-watch-papers-of-the-week" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">LLM Watch Papers of the Week</div>
+          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
+          <div class="article-card-summary">Weekly curated selection of the most important LLM research papers.</div>
+        </a>
+        <a href="https://www.llmwatch.com/p/9-papers-you-should-know-about-1f5" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">9 Papers You Should Know About</div>
+          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
+          <div class="article-card-summary">Curated roundup of 9 significant papers in LLM and AI agent research.</div>
+        </a>
+        <a href="https://www.llmwatch.com/p/ai-is-shaking-up-the-life-sciences" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">AI Is Shaking Up the Life Sciences</div>
+          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
+          <div class="article-card-summary">How LLMs and AI agents are transforming drug discovery, clinical trials, and life sciences.</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════ SEBASTIAN RASCHKA ══════ -->
+    <div id="feed-sebastian" class="tab-panel" role="tabpanel">
+      <div class="feed-error">⚠ Fetched via web search — dates and summaries may be approximate</div>
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-week">This Week</span>
+          <span class="date-group-label">March 15 – 22, 2026</span>
+        </div>
+        <a href="https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan–Feb 2026</div>
+          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>Feb 2026</span></div>
+          <div class="article-card-summary">Deep dive into 10 major open-weight LLM releases including Qwen3-Coder-Next, Mistral Small 3.1, and more.</div>
+        </a>
+        <a href="https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">The State of Reinforcement Learning for LLM Reasoning</div>
+          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>2026</span></div>
+          <div class="article-card-summary">Comprehensive overview of RL techniques for improving LLM reasoning capabilities.</div>
+        </a>
+        <a href="https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">New LLM Pre-training and Post-training Paradigms</div>
+          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>2026</span></div>
+          <div class="article-card-summary">Analysis of emerging approaches to LLM training that go beyond standard pre-training.</div>
+        </a>
+        <a href="https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">The Big LLM Architecture Comparison</div>
+          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>2026</span></div>
+          <div class="article-card-summary">Side-by-side comparison of major LLM architectures, their trade-offs, and use cases.</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════ 404 MEDIA ══════ -->
+    <div id="feed-404media" class="tab-panel" role="tabpanel">
+      <div class="feed-error">⚠ Fetched via web search — dates and summaries may be approximate</div>
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-week">This Week</span>
+          <span class="date-group-label">March 15 – 22, 2026</span>
+        </div>
+        <a href="https://www.404media.co/scientists-are-increasingly-worried-ai-will-sway-elections/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Scientists Are Increasingly Worried AI Will Sway Elections</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
+          <div class="article-card-summary">Three new studies show AI models can sway voters and evade detection in surveys.</div>
+        </a>
+        <a href="https://www.404media.co/zuckerberg-the-ai-slop-will-continue-until-morale-improves/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Zuckerberg: The AI Slop Will Continue Until Morale Improves</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
+          <div class="article-card-summary">Meta continues pushing AI-generated content despite growing user backlash.</div>
+        </a>
+        <a href="https://www.404media.co/podcast-why-we-cover-ai-the-way-we-do/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Why We Cover AI the Way We Do</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
+          <div class="article-card-summary">404 Media's editorial philosophy on covering AI with investigative rigor.</div>
+        </a>
+        <a href="https://www.404media.co/email/d608ac50-9a2f-4cbf-b031-ddf113e174a5/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Heads in the AI Slop Sand</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
+          <div class="article-card-summary">Investigation into AI-generated content flooding platforms and its real-world impact.</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════ AI BUSINESS ══════ -->
+    <div id="feed-aibusiness" class="tab-panel" role="tabpanel">
+      <div class="feed-error">⚠ Fetched via web search — dates and summaries may be approximate</div>
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-week">This Week</span>
+          <span class="date-group-label">March 15 – 22, 2026</span>
+        </div>
+        <a href="https://aibusiness.com/agentic-ai/agent-365-microsoft-pumps-agentic-systems" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Microsoft Pumps Agentic AI Into Its Systems</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
+          <div class="article-card-summary">Microsoft Agent 365 brings agentic AI across Defender, Entra, Purview, and M365 apps.</div>
+        </a>
+        <a href="https://aibusiness.com/agentic-ai/enterprises-should-prioritize-governance-amid-agentic-ai-boom" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Enterprises Should Prioritize Governance Amid Agentic AI Boom</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
+          <div class="article-card-summary">91% using agents but only 10% have governance strategies.</div>
+        </a>
+        <a href="https://aibusiness.com/agentic-ai/openai-s-latest-platform-targets-enterprise-customers" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">OpenAI's Frontier Platform Targets Enterprise Customers</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
+          <div class="article-card-summary">OpenAI Frontier helps enterprises build, deploy, and manage AI agents.</div>
+        </a>
+        <a href="https://aibusiness.com/agentic-ai/agentic-ai-is-rewriting-the-rules-of-enterprise-planning" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Agentic AI Rewrites the Rules of Enterprise Planning</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
+          <div class="article-card-summary">From custom builds to licensed solutions, and single agents to orchestrated meshes.</div>
+        </a>
+        <a href="https://aibusiness.com/agentic-ai/anthropic-targets-more-industries-with-plugins" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Anthropic Targets More Industries With Claude Cowork Plugins</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
+          <div class="article-card-summary">Anthropic expands Claude's reach via Cowork plugins targeting diverse industry verticals.</div>
+        </a>
+        <a href="https://aibusiness.com/agentic-ai/transforming-engineering-agentic-ai" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Engineering and Agentic AI</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
+          <div class="article-card-summary">How agentic AI is transforming engineering workflows and software development processes.</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════ INFOQ AI/ML ══════ -->
+    <div id="feed-infoq" class="tab-panel" role="tabpanel">
+      <div class="feed-error">⚠ Fetched via web search — dates and summaries may be approximate</div>
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-week">This Week</span>
+          <span class="date-group-label">March 15 – 22, 2026</span>
+        </div>
+        <a href="https://www.infoq.com/news/2026/03/google-multi-agent/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Google Publishes Scaling Principles for Agentic Architectures</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
+          <div class="article-card-summary">Predictive framework for scaling multi-agent systems with tool-coordination trade-offs.</div>
+        </a>
+        <a href="https://www.infoq.com/news/2026/03/agents-context-file-value-review/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">New Research Reassesses the Value of AGENTS.md Files</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
+          <div class="article-card-summary">ETH Zurich finds AGENTS.md files may hinder AI coding agents.</div>
+        </a>
+        <a href="https://www.infoq.com/news/2026/03/aws-strands-agents/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">AWS Launches Strands Labs for AI Agent Projects</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
+          <div class="article-card-summary">Open-source Strands Agents SDK for building agents in Python/TypeScript.</div>
+        </a>
+        <a href="https://www.infoq.com/news/2026/03/hubspot-ai-code-review-agent/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">HubSpot's Sidekick: AI Code Review Agent</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
+          <div class="article-card-summary">90% faster PR feedback, 80% engineer approval for AI code review.</div>
+        </a>
+        <a href="https://www.infoq.com/news/2026/03/qconai-boston-2026-talks/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">QCon AI Boston 2026 Early Program</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
+          <div class="article-card-summary">Talks on context engineering, agent explainability, reasoning beyond RAG.</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════ NATE'S AI NEWSLETTER ══════ -->
+    <div id="feed-nate" class="tab-panel" role="tabpanel">
+      <div class="feed-error">⚠ Fetched via web search — dates and summaries may be approximate</div>
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-week">This Week</span>
+          <span class="date-group-label">March 15 – 22, 2026</span>
+        </div>
+        <a href="https://natesnewsletter.substack.com/p/ai-news-that-matters-for-builders" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">The Week AI Infrastructure Got Real</div>
+          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 2026</span></div>
+          <div class="article-card-summary">Analysis of operational challenges in deploying AI agents at scale.</div>
+        </a>
+        <a href="https://natesnewsletter.substack.com/p/executive-briefing-ai-raised-output" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Executive Briefing: AI Raised Output Per Person 10x</div>
+          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 8, 2026</span></div>
+          <div class="article-card-summary">AI raised output per person by 10x but hasn't reduced coordination costs.</div>
+        </a>
+        <a href="https://natesnewsletter.substack.com/p/your-engineers-are-building-your" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Your Engineers Are Building Your Lock-In</div>
+          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 2026</span></div>
+          <div class="article-card-summary">Audit your AI platform lock-in before switching costs compound.</div>
+        </a>
+        <a href="https://natesnewsletter.substack.com/p/executive-briefing-the-5-ai-shifts" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Executive Briefing: 5 AI Shifts for 2026</div>
+          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 2026</span></div>
+          <div class="article-card-summary">Your 2026 AI roadmap in minutes — 5 drivers, cross-cuts, next steps.</div>
+        </a>
+        <a href="https://natesnewsletter.substack.com/p/20-hours-of-ai-news-in-10-minutes" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">20 Hours of AI News in 10 Minutes</div>
+          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 2026</span></div>
+          <div class="article-card-summary">Condensed AI news roundup with actionable takeaways.</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="brief-footer">
+    <div class="footer-rule"></div>
+    <p>AI Daily Brief | Published March 22, 2026 | 6 feeds, 35 articles</p>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      const panels = document.querySelectorAll('.tab-panel');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      panels.forEach(p => p.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.closest('.tab-btn').classList.add('active');
+    }
+
+    function toggleNewFilter() {
+      document.body.classList.toggle('filter-new');
+      const btn = event.target.closest('.new-filter-btn');
+      btn.classList.toggle('active');
+      const emptyMsg = document.querySelector('.filter-empty');
+      if (document.body.classList.contains('filter-new')) {
+        emptyMsg.style.display = 'block';
+      } else {
+        emptyMsg.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
