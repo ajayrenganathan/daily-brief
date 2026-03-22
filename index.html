@@ -285,6 +285,20 @@
       color: var(--clr-text-muted);
       letter-spacing: 0.02em;
     }
+    .page-footer a { color: var(--clr-text-muted); text-decoration: none; transition: color 0.25s ease; }
+    .page-footer a:hover { color: var(--clr-accent); }
+
+    .top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 900px; margin: 0 auto; padding: 0.75rem 1.25rem;
+      font-family: var(--font-body); font-size: 0.68rem; font-weight: 500;
+      color: var(--clr-text-muted); letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--clr-border-subtle); margin-bottom: 0;
+    }
+    .top-bar-home { font-weight: 600; color: var(--clr-text-muted); text-decoration: none; transition: color 0.25s ease; letter-spacing: 0.04em; }
+    .top-bar-home:hover { color: var(--clr-accent); }
+    .top-bar-home svg { width: 12px; height: 12px; vertical-align: -1px; margin-right: 0.3em; stroke: currentColor; }
+    .top-bar-label { text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; color: var(--clr-text-muted); }
 
     .footer-rule {
       width: 32px;
@@ -343,6 +357,11 @@
 </head>
 <body>
 
+  <div class="top-bar">
+    <a href="https://iajayr.com" class="top-bar-home"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>iajayr.com</a>
+    <span class="top-bar-label">My Daily Briefs</span>
+  </div>
+
   <div class="container">
 
     <header class="page-header">
@@ -382,6 +401,7 @@
     <footer class="page-footer">
       <div class="footer-rule"></div>
       Powered by AI Daily Brief skill
+      <p style="margin-top: 0.75rem;"><a href="https://iajayr.com">&larr; Back to iajayr.com</a></p>
     </footer>
 
   </div>
