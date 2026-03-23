@@ -258,7 +258,7 @@
 
   <div class="top-bar">
     <a href="https://iajayr.com" class="top-bar-home"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>iajayr.com</a>
-    <span class="top-bar-updated">Last updated: <time>March 23, 2026 at 9:00 AM</time></span>
+    <span class="top-bar-updated">Last updated: <time>March 23, 2026 at 9:15 AM</time></span>
     <span class="top-bar-label">AI Daily Brief</span>
   </div>
 
@@ -269,11 +269,11 @@
       <h1>AI Daily Brief</h1>
       <div class="brief-stats">
         <div class="stat">
-          <span class="stat-value">38</span>
+          <span class="stat-value">35</span>
           <span class="stat-label">Articles</span>
         </div>
         <div class="stat">
-          <span class="stat-value stat-value-accent">12</span>
+          <span class="stat-value stat-value-accent">10</span>
           <span class="stat-label">Highlights</span>
         </div>
         <div class="stat">
@@ -287,25 +287,24 @@
       <span class="label">Highlighting:</span>
       <span class="topic-tag">LLMs</span>
       <span class="topic-tag">AI Agents</span>
-      <span class="topic-tag">Enterprise AI</span>
+      <span class="topic-tag">AI Policy</span>
       <span class="topic-tag">Agentic Coding</span>
-      <span class="topic-tag">AI Safety</span>
+      <span class="topic-tag">AI Hardware</span>
     </div>
 
     <div class="filter-toolbar">
       <nav class="tabs-nav" role="tablist">
-        <button class="tab-btn active" role="tab" onclick="switchTab('highlights')">Highlights <span class="tab-count">12</span></button>
-        <button class="tab-btn" role="tab" onclick="switchTab('feed-nate')">Nate's Newsletter <span class="tab-count">5</span></button>
-        <button class="tab-btn" role="tab" onclick="switchTab('feed-llm-watch')">LLM Watch <span class="tab-count">5</span></button>
+        <button class="tab-btn active" role="tab" onclick="switchTab('highlights')">Highlights <span class="tab-count">10</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-ainews')">AI News <span class="tab-count">5</span></button>
         <button class="tab-btn" role="tab" onclick="switchTab('feed-sebastian')">Sebastian Raschka <span class="tab-count">4</span></button>
         <button class="tab-btn" role="tab" onclick="switchTab('feed-404media')">404 Media <span class="tab-count">5</span></button>
-        <button class="tab-btn" role="tab" onclick="switchTab('feed-aibusiness')">AI Business <span class="tab-count">6</span></button>
-        <button class="tab-btn" role="tab" onclick="switchTab('feed-infoq')">InfoQ AI/ML <span class="tab-count">6</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-aibusiness')">AI Business <span class="tab-count">5</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-infoq')">InfoQ AI/ML <span class="tab-count">5</span></button>
       </nav>
       <div class="filter-actions">
         <button class="new-filter-btn" onclick="toggleNewFilter()" title="Show only new articles from today">
           <span class="new-dot"></span>
-          New <span class="new-count">5</span>
+          New <span class="new-count">8</span>
         </button>
       </div>
     </div>
@@ -318,230 +317,169 @@
     <!-- ══════ HIGHLIGHTS ══════ -->
     <div id="highlights" class="tab-panel active" role="tabpanel">
 
-      <a href="https://www.cnn.com/2026/03/16/tech/nvidia-jensen-huang-ai-agents" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
+      <a href="https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
         <div class="highlight-card-title">
           <span class="highlight-rank">1</span>
-          NVIDIA Launches Agent Toolkit with OpenShell Secure Runtime
+          Stripe Deploys Autonomous Coding Agents Producing 1,300+ Pull Requests Weekly
         </div>
-        <div class="highlight-card-ai-summary">NVIDIA introduced its Agent Toolkit with OpenShell for secure runtime environments, Nemotron models, and AI-Q agent blueprints. Jensen Huang positions secure agent infrastructure as the critical missing piece for enterprise adoption — completing the compute-to-deployment stack.</div>
+        <div class="highlight-card-ai-summary">Stripe's autonomous agents are now generating over 1,300 pull requests per week across their codebase. This represents a dramatic shift in how companies are leveraging agentic AI for routine software engineering tasks at scale.</div>
         <div class="highlight-card-meta">
-          <span class="article-source">CNN Business</span>
-          <span>March 2026</span>
+          <span class="article-source">InfoQ AI/ML</span>
+          <span>March 20, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://www.infoq.com/news/2026/03/open-ai-codex-spark/" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
+      <a href="https://www.infoq.com/news/2026/03/claude-ai-firefox-vulnerability/" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
         <div class="highlight-card-title">
           <span class="highlight-rank">2</span>
-          OpenAI Codex Ships Subagents and Custom Agent Skills
+          AI Model Discovers 22 Firefox Vulnerabilities in Two Weeks
         </div>
-        <div class="highlight-card-ai-summary">OpenAI Codex now supports subagents, custom agents, and reusable agent skills — transforming it from a code completion tool into a full agentic development platform. With 2M+ weekly active users, this is the clearest signal that AI coding is going multi-agent.</div>
+        <div class="highlight-card-ai-summary">An AI model identified 22 new Firefox vulnerabilities in just two weeks, demonstrating the tool's capability for security research. This marks a significant milestone in using AI for vulnerability discovery at scale.</div>
         <div class="highlight-card-meta">
           <span class="article-source">InfoQ AI/ML</span>
-          <span>March 2026</span>
+          <span>March 19, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://natesnewsletter.substack.com/p/whoop-is-hiring-600-people-while" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
+      <a href="https://aibusiness.com/ai-policy/trump-administration-releases-ai-legislative-framework" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
         <div class="highlight-card-title">
           <span class="highlight-rank">3</span>
-          AI Cutting Execution Cost 10x — But Companies Cutting Headcount Are Making 2026's Biggest Mistake
+          Trump Administration Releases AI Legislative Framework
         </div>
-        <div class="highlight-card-ai-summary">Nate's analysis argues that AI has raised per-person output 10x, but enterprises slashing headcount are making the most expensive strategic error of 2026. The real opportunity is scaling capacity, not reducing it.</div>
+        <div class="highlight-card-ai-summary">The Trump administration has released its official AI legislative framework, setting regulatory expectations for the AI industry. This policy release shapes the compliance and governance landscape for AI companies operating in the US.</div>
         <div class="highlight-card-meta">
-          <span class="article-source">Nate's AI Newsletter</span>
-          <span>March 2026</span>
+          <span class="article-source">AI Business</span>
+          <span>March 20, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://www.infoq.com/news/2026/03/ai-coding-state/" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
+      <a href="https://aibusiness.com/generative-ai/samsung-pledges-73b-to-boost-ai-chip-standing" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
         <div class="highlight-card-title">
           <span class="highlight-rank">4</span>
-          QCon London: AI Coding Agents — More Capable, More Expensive, More Dangerous
+          Samsung Pledges $73B to Boost AI Chip Standing
         </div>
-        <div class="highlight-card-ai-summary">Birgitta Böckeler's QCon London talk mapped the shift from vibe coding to autonomous coding agent swarms, warning of a worsening security landscape and rising costs that enterprises aren't pricing in.</div>
+        <div class="highlight-card-ai-summary">Samsung announced a massive $73 billion investment to strengthen its position in AI chip manufacturing. This commitment reflects the intensifying competition for AI hardware dominance among global semiconductor giants.</div>
         <div class="highlight-card-meta">
-          <span class="article-source">InfoQ AI/ML</span>
-          <span>March 2026</span>
+          <span class="article-source">AI Business</span>
+          <span>March 19, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://www.infoq.com/news/2026/03/google-multi-agent/" target="_blank" rel="noopener" class="highlight-card animate-in">
+      <a href="https://www.infoq.com/news/2026/03/morgan-stanley-apis-mcp-calm/" target="_blank" rel="noopener" class="highlight-card animate-in">
         <div class="highlight-card-title">
           <span class="highlight-rank">5</span>
-          Google Publishes Scaling Principles for Agentic Architectures
+          Morgan Stanley Rethinks API Program for the MCP Era
         </div>
-        <div class="highlight-card-ai-summary">Google and MIT researchers reveal a predictive framework for scaling multi-agent systems, uncovering a tool-coordination trade-off that determines the optimal architecture for any given task.</div>
+        <div class="highlight-card-ai-summary">Morgan Stanley is restructuring its API architecture to leverage the Model Context Protocol (MCP), signaling how enterprise platforms are adapting to agentic AI workflows. This represents a major shift in API-first thinking at scale.</div>
         <div class="highlight-card-meta">
           <span class="article-source">InfoQ AI/ML</span>
-          <span>March 2026</span>
+          <span>March 19, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://www.infoq.com/news/2026/03/hubspot-ai-code-review-agent/" target="_blank" rel="noopener" class="highlight-card animate-in">
+      <a href="https://aibusiness.com/agentic-ai/tencent-to-double-ai-spending-to-more-than-5b" target="_blank" rel="noopener" class="highlight-card animate-in">
         <div class="highlight-card-title">
           <span class="highlight-rank">6</span>
-          HubSpot's Sidekick: Multi-Model AI Code Review with 90% Faster Feedback
+          Tencent to Double AI Spending to More Than $5B Over Next Year
         </div>
-        <div class="highlight-card-ai-summary">HubSpot built an internal AI code review agent that cut time-to-first-feedback on PRs by 90% with 80% engineer approval. One of the clearest ROI stories for AI agents in software engineering.</div>
+        <div class="highlight-card-ai-summary">Tencent announced it will double its AI spending to exceed $5 billion annually, underscoring the massive capital commitments tech giants are making to maintain competitive AI advantage. This investment covers research, infrastructure, and capability development.</div>
         <div class="highlight-card-meta">
-          <span class="article-source">InfoQ AI/ML</span>
-          <span>March 2026</span>
+          <span class="article-source">AI Business</span>
+          <span>March 19, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://aibusiness.com/foundation-models/anthropic-launches-skills-open-standard-claude" target="_blank" rel="noopener" class="highlight-card animate-in">
+      <a href="https://magazine.sebastianraschka.com/p/visual-attention-variants" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
         <div class="highlight-card-title">
           <span class="highlight-rank">7</span>
-          Anthropic Launches Skills Open Standard for Claude
+          A Visual Guide to Attention Variants in Modern LLMs
         </div>
-        <div class="highlight-card-ai-summary">Anthropic released its Agent Skills specification as an open standard, enabling Claude users to create, deploy, share and discover reusable skills. This standardizes the agentic capability layer across the Claude ecosystem.</div>
+        <div class="highlight-card-ai-summary">Sebastian Raschka published a comprehensive visual guide exploring attention mechanism variants (MHA, GQA, MLA) with model cards for 45 LLM architectures. This reference clarifies the technical foundations of modern transformer designs.</div>
         <div class="highlight-card-meta">
-          <span class="article-source">AI Business</span>
-          <span>March 2026</span>
+          <span class="article-source">Sebastian Raschka</span>
+          <span>March 22, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://aibusiness.com/agentic-ai/agent-365-microsoft-pumps-agentic-systems" target="_blank" rel="noopener" class="highlight-card animate-in">
+      <a href="https://aibusiness.com/generative-ai/google-s-stitch-and-ai-driven-development" target="_blank" rel="noopener" class="highlight-card animate-in">
         <div class="highlight-card-title">
           <span class="highlight-rank">8</span>
-          Microsoft Agent 365: Agentic AI Across the Enterprise Stack
+          Google's Stitch and the Shift in AI-Driven Development
         </div>
-        <div class="highlight-card-ai-summary">Microsoft bakes agentic AI into the entire Microsoft 365 stack with Defender security, Entra identity, and Purview governance built in — the strongest signal that AI agents are becoming infrastructure.</div>
+        <div class="highlight-card-ai-summary">Google introduced Stitch, its AI-driven UI development framework that automates interface generation and interaction logic. This tool exemplifies the trend toward code-generation at the presentation layer.</div>
         <div class="highlight-card-meta">
           <span class="article-source">AI Business</span>
-          <span>March 2026</span>
+          <span>March 19, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
-      <a href="https://natesnewsletter.substack.com/p/meta-bought-manus-for-2b-to-acquire" target="_blank" rel="noopener" class="highlight-card animate-in">
+      <a href="https://www.404media.co/tinder-plans-to-let-ai-scan-your-camera-roll/" target="_blank" rel="noopener" class="highlight-card animate-in">
         <div class="highlight-card-title">
           <span class="highlight-rank">9</span>
-          Meta Acquired Manus for $2B — What 'Agentic Harness' Means
+          Tinder Plans to Let AI Scan Your Camera Roll
         </div>
-        <div class="highlight-card-ai-summary">Meta's $2B acquisition of Manus introduces 'agentic harness' as a critical enterprise concept — the orchestration layer that manages context, memory, and tool access across multiple AI agents.</div>
-        <div class="highlight-card-meta">
-          <span class="article-source">Nate's AI Newsletter</span>
-          <span>March 2026</span>
-          <span class="date-badge date-badge-week">This Week</span>
-        </div>
-      </a>
-
-      <a href="https://www.infoq.com/news/2026/03/cloudflare-crawler/" target="_blank" rel="noopener" class="highlight-card animate-in">
-        <div class="highlight-card-title">
-          <span class="highlight-rank">10</span>
-          Cloudflare Debuts Markdown for Agents and Content Signals
-        </div>
-        <div class="highlight-card-ai-summary">Cloudflare's 'Markdown for Agents' lets AI crawlers request Markdown versions of web pages, paired with Content Signals for publishers to control AI training, indexing, and inference usage.</div>
-        <div class="highlight-card-meta">
-          <span class="article-source">InfoQ AI/ML</span>
-          <span>March 2026</span>
-          <span class="date-badge date-badge-week">This Week</span>
-        </div>
-      </a>
-
-      <a href="https://aibusiness.com/agentic-ai/enterprises-should-prioritize-governance-amid-agentic-ai-boom" target="_blank" rel="noopener" class="highlight-card animate-in">
-        <div class="highlight-card-title">
-          <span class="highlight-rank">11</span>
-          Enterprises Should Prioritize Governance Amid Agentic AI Boom
-        </div>
-        <div class="highlight-card-ai-summary">91% of organizations already use AI agents, but only 10% have effective governance. With 90% lacking a clear strategy for AI-related threats, governance is the critical bottleneck.</div>
-        <div class="highlight-card-meta">
-          <span class="article-source">AI Business</span>
-          <span>March 2026</span>
-          <span class="date-badge date-badge-week">This Week</span>
-        </div>
-      </a>
-
-      <a href="https://www.404media.co/scientists-are-increasingly-worried-ai-will-sway-elections/" target="_blank" rel="noopener" class="highlight-card animate-in" data-new="true">
-        <div class="highlight-card-title">
-          <span class="highlight-rank">12</span>
-          Scientists Are Increasingly Worried AI Will Sway Elections
-        </div>
-        <div class="highlight-card-ai-summary">Three new studies show AI models can meaningfully sway voters using misinformation while evading detection. The intersection of AI capabilities and democratic integrity grows more urgent.</div>
+        <div class="highlight-card-ai-summary">Tinder announced plans to enable AI photo analysis directly from user camera rolls. This feature has sparked privacy concerns about device-side AI access and data handling practices.</div>
         <div class="highlight-card-meta">
           <span class="article-source">404 Media</span>
-          <span>March 2026</span>
+          <span>March 19, 2026</span>
+          <span class="date-badge date-badge-week">This Week</span>
+        </div>
+      </a>
+
+      <a href="https://aibusiness.com/generative-ai/rivian-s-bet-on-ai-attracts-1-2b-uber-deal" target="_blank" rel="noopener" class="highlight-card animate-in">
+        <div class="highlight-card-title">
+          <span class="highlight-rank">10</span>
+          Rivian's AI Investment Attracts $1.25B Uber Deal
+        </div>
+        <div class="highlight-card-ai-summary">Rivian secured a $1.25 billion partnership with Uber, validating the company's AI-powered autonomous fleet strategy. This deal demonstrates investor confidence in AI-first approaches to autonomous vehicle logistics.</div>
+        <div class="highlight-card-meta">
+          <span class="article-source">AI Business</span>
+          <span>March 20, 2026</span>
           <span class="date-badge date-badge-week">This Week</span>
         </div>
       </a>
 
     </div>
 
-    <!-- ══════ NATE'S NEWSLETTER ══════ -->
-    <div id="feed-nate" class="tab-panel" role="tabpanel">
+    <!-- ══════ AI NEWS ══════ -->
+    <div id="feed-ainews" class="tab-panel" role="tabpanel">
       <div class="date-group">
         <div class="date-group-header">
           <span class="date-badge date-badge-week">This Week</span>
           <span class="date-group-label">March 16 – 23, 2026</span>
         </div>
-        <a href="https://natesnewsletter.substack.com/p/whoop-is-hiring-600-people-while" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">AI Cut Execution Cost by 10x — Companies Cutting Headcount Are Making 2026's Biggest Mistake</div>
-          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 2026</span></div>
-          <div class="article-card-summary">Scale capacity, don't reduce headcount.</div>
+        <a href="https://buttondown.com/ainews/archive/ainews-gemini-2-5-flash-tops-chatbot-arena-leaderboard/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Gemini 2.5 Flash Tops Chatbot Arena Leaderboard</div>
+          <div class="article-card-meta"><span class="article-source">AI News (smol.ai)</span><span>March 2026</span></div>
+          <div class="article-card-summary">Google's Gemini 2.5 Flash achieves top rank in LMSYS Chatbot Arena evaluations.</div>
         </a>
-        <a href="https://natesnewsletter.substack.com/p/meta-bought-manus-for-2b-to-acquire" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Meta Bought Manus for $2B — What 'Agentic Harness' Means</div>
-          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>Jan 2026</span></div>
-          <div class="article-card-summary">The orchestration layer concept enters enterprise vocabulary.</div>
+        <a href="https://buttondown.com/ainews/archive/ainews-grok-3-3-mini-now-api-available/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Grok 3 & 3-mini Now API Available</div>
+          <div class="article-card-meta"><span class="article-source">AI News (smol.ai)</span><span>March 2026</span></div>
+          <div class="article-card-summary">xAI releases Grok 3 and 3-mini models to API users for production deployment.</div>
         </a>
-        <a href="https://natesnewsletter.substack.com/p/perplexity-shipped-its-best-product" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Perplexity Shipped Its Best Product — Most AI Companies Are Renting Their Position</div>
-          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 2026</span></div>
-          <div class="article-card-summary">Perplexity targeting $656M in 2026 revenue.</div>
+        <a href="https://buttondown.com/ainews/archive/ainews-google-gemma-3-qat/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Google Gemma 3 QAT Quantization and Ecosystem Launches</div>
+          <div class="article-card-meta"><span class="article-source">AI News (smol.ai)</span><span>March 2026</span></div>
+          <div class="article-card-summary">Quantization-aware training approaches for optimizing Gemma 3 for edge deployment.</div>
         </a>
-        <a href="https://natesnewsletter.substack.com/p/what-anthropics-new-constitution" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Claude's 80-Page Constitution Breakdown + 3 Prompts</div>
-          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>Feb 2026</span></div>
-          <div class="article-card-summary">Practical implications of Anthropic's Claude Constitution.</div>
+        <a href="https://buttondown.com/ainews/archive/ainews-mistral-small-4-119b-moe/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Mistral Small 4: 119B MoE Open-Source Powerhouse</div>
+          <div class="article-card-meta"><span class="article-source">AI News (smol.ai)</span><span>March 2026</span></div>
+          <div class="article-card-summary">Mistral releases 119B mixture-of-experts model with competitive performance on benchmarks.</div>
         </a>
-        <a href="https://natesnewsletter.substack.com/p/executive-briefing-the-5-ai-shifts" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Executive Briefing: Your 2026 AI Roadmap in Minutes</div>
-          <div class="article-card-meta"><span class="article-source">Nate's AI Newsletter</span><span>March 2026</span></div>
-          <div class="article-card-summary">5 drivers, cross-cuts, and next steps for 2026.</div>
-        </a>
-      </div>
-    </div>
-
-    <!-- ══════ LLM WATCH ══════ -->
-    <div id="feed-llm-watch" class="tab-panel" role="tabpanel">
-      <div class="date-group">
-        <div class="date-group-header">
-          <span class="date-badge date-badge-week">This Week</span>
-          <span class="date-group-label">March 16 – 23, 2026</span>
-        </div>
-        <a href="https://www.llmwatch.com/p/ai-agents-of-the-week-papers-you-f11" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">AI Agents of the Week: Papers You Should Know About</div>
-          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 15, 2026</span></div>
-          <div class="article-card-summary">Research on MADQA benchmark, information self-locking in RL-trained agents.</div>
-        </a>
-        <a href="https://www.llmwatch.com/p/the-best-agent-nobody-is-talking" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">The Best AI Agent Nobody Is Talking About</div>
-          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
-          <div class="article-card-summary">Analysis of an under-the-radar AI agent outperforming better-known alternatives.</div>
-        </a>
-        <a href="https://www.llmwatch.com/p/llm-watch-papers-of-the-week" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">LLM Watch Papers of the Week</div>
-          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
-          <div class="article-card-summary">Weekly curated selection of the most important LLM research papers.</div>
-        </a>
-        <a href="https://www.llmwatch.com/p/9-papers-you-should-know-about-1f5" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">9 Papers You Should Know About</div>
-          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
-          <div class="article-card-summary">Curated roundup of 9 significant papers in LLM and AI agent research.</div>
-        </a>
-        <a href="https://www.llmwatch.com/p/reinforcement-learning-without-human" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
-          <div class="article-card-title">Reinforcement Learning Without Human Feedback</div>
-          <div class="article-card-meta"><span class="article-source">LLM Watch</span><span>March 2026</span></div>
-          <div class="article-card-summary">New approaches to RL training that bypass the need for human preference data.</div>
+        <a href="https://buttondown.com/ainews/archive/ainews-agent-tooling-frameworks/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Agent Tooling, Frameworks, and Design Patterns</div>
+          <div class="article-card-meta"><span class="article-source">AI News (smol.ai)</span><span>March 2026</span></div>
+          <div class="article-card-summary">Overview of emerging frameworks and best practices for building AI agents.</div>
         </a>
       </div>
     </div>
@@ -553,25 +491,25 @@
           <span class="date-badge date-badge-week">This Week</span>
           <span class="date-group-label">March 16 – 23, 2026</span>
         </div>
-        <a href="https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan–Feb 2026</div>
-          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>Feb 2026</span></div>
-          <div class="article-card-summary">Deep dive into 10 open-weight LLM releases including Qwen3-Coder-Next.</div>
+        <a href="https://magazine.sebastianraschka.com/p/visual-attention-variants" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">A Visual Guide to Attention Variants in Modern LLMs</div>
+          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>March 22, 2026</span></div>
+          <div class="article-card-summary">Comprehensive visual exploration of MHA, GQA, MLA attention mechanisms with 45 LLM architecture model cards.</div>
         </a>
-        <a href="https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training" target="_blank" rel="noopener" class="article-card animate-in">
+        <a href="https://magazine.sebastianraschka.com/p/dream-of-spring-open-weight-llms" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">A Dream of Spring for Open-Weight LLMs: Key 2026 Releases</div>
+          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>Feb 2026</span></div>
+          <div class="article-card-summary">Analysis of major open-weight LLM releases including architectures and performance insights.</div>
+        </a>
+        <a href="https://magazine.sebastianraschka.com/p/state-llm-reasoning-rl" target="_blank" rel="noopener" class="article-card animate-in">
           <div class="article-card-title">The State of Reinforcement Learning for LLM Reasoning</div>
           <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>2026</span></div>
-          <div class="article-card-summary">Comprehensive overview of RL techniques for improving LLM reasoning.</div>
+          <div class="article-card-summary">Deep dive into RL techniques for improving reasoning capabilities in large language models.</div>
         </a>
-        <a href="https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training" target="_blank" rel="noopener" class="article-card animate-in">
+        <a href="https://magazine.sebastianraschka.com/p/new-llm-training-paradigms" target="_blank" rel="noopener" class="article-card animate-in">
           <div class="article-card-title">New LLM Pre-training and Post-training Paradigms</div>
           <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>2026</span></div>
-          <div class="article-card-summary">Analysis of emerging approaches beyond standard pre-training.</div>
-        </a>
-        <a href="https://magazine.sebastianraschka.com/p/beyond-standard-llms" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Beyond Standard LLMs</div>
-          <div class="article-card-meta"><span class="article-source">Sebastian Raschka</span><span>2026</span></div>
-          <div class="article-card-summary">Exploring architectures and approaches that go beyond traditional LLM design.</div>
+          <div class="article-card-summary">Exploration of emerging training approaches beyond standard transformer pre-training methods.</div>
         </a>
       </div>
     </div>
@@ -583,30 +521,30 @@
           <span class="date-badge date-badge-week">This Week</span>
           <span class="date-group-label">March 16 – 23, 2026</span>
         </div>
-        <a href="https://www.404media.co/scientists-are-increasingly-worried-ai-will-sway-elections/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Scientists Are Increasingly Worried AI Will Sway Elections</div>
-          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
-          <div class="article-card-summary">Three new studies on AI swaying voters.</div>
+        <a href="https://www.404media.co/scientists-narrow-down-the-hunt-for-aliens-to-45-planets/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Scientists Narrow Down the Hunt for Aliens to 45 Planets</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 21, 2026</span></div>
+          <div class="article-card-summary">New analysis using AI narrows candidate exoplanets for extraterrestrial life detection to 45 targets.</div>
         </a>
-        <a href="https://www.404media.co/tag/news/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
-          <div class="article-card-title">Kenyan Workers Remain the Underpaid Labor Behind AI</div>
-          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 13, 2026</span></div>
-          <div class="article-card-summary">Data Labelers Association fights back against low wages for AI training work.</div>
+        <a href="https://www.404media.co/behind-the-blog-marathon-and-the-metaverse/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Behind the Blog: Marathon and the Metaverse</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 20, 2026</span></div>
+          <div class="article-card-summary">Analysis of Marathon's metaverse initiatives and corporate strategy pivots.</div>
         </a>
-        <a href="https://www.404media.co/tag/news/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">AI-Translated Wikipedia Articles Swapping Sources</div>
-          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
-          <div class="article-card-summary">AI translations adding unsourced sentences and swapping references.</div>
+        <a href="https://www.404media.co/tiny-city-fears-iran-drone-strikes-because-of-new-nuclear-weapons-datacenter/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Tiny Township Fears Iran Drone Strikes Because of New Nuclear Weapons Datacenter</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 20, 2026</span></div>
+          <div class="article-card-summary">AI datacenter development raises security and geopolitical concerns in small communities.</div>
         </a>
-        <a href="https://www.404media.co/zuckerberg-the-ai-slop-will-continue-until-morale-improves/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Zuckerberg: The AI Slop Will Continue Until Morale Improves</div>
-          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
-          <div class="article-card-summary">Meta continues pushing AI-generated content despite user backlash.</div>
+        <a href="https://www.404media.co/rip-metaverse-an-80-billion-dumpster-fire-nobody-wanted/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">RIP Metaverse, an $80 Billion Dumpster Fire Nobody Wanted</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">Retrospective on the failed metaverse boom and $80B in wasted venture capital.</div>
         </a>
-        <a href="https://www.404media.co/tag/news/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">FBI Official: AI Is a 'Game Changer' for Remote Access Operations</div>
-          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 2026</span></div>
-          <div class="article-card-summary">FBI leveraging AI for remote access operations in new ways.</div>
+        <a href="https://www.404media.co/tinder-plans-to-let-ai-scan-your-camera-roll/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Tinder Plans to Let AI Scan Your Camera Roll</div>
+          <div class="article-card-meta"><span class="article-source">404 Media</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">On-device AI photo analysis feature raises privacy questions for dating app users.</div>
         </a>
       </div>
     </div>
@@ -618,35 +556,30 @@
           <span class="date-badge date-badge-week">This Week</span>
           <span class="date-group-label">March 16 – 23, 2026</span>
         </div>
-        <a href="https://aibusiness.com/agentic-ai/agent-365-microsoft-pumps-agentic-systems" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Microsoft Pumps Agentic AI Into Its Systems</div>
-          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
-          <div class="article-card-summary">Agent 365 across Defender, Entra, Purview, and M365.</div>
+        <a href="https://aibusiness.com/ai-policy/trump-administration-releases-ai-legislative-framework" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Trump Administration Releases AI Legislative Framework</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 20, 2026</span></div>
+          <div class="article-card-summary">New regulatory framework sets compliance expectations for the AI industry.</div>
         </a>
-        <a href="https://aibusiness.com/foundation-models/anthropic-launches-skills-open-standard-claude" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Anthropic Launches Skills Open Standard for Claude</div>
-          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
-          <div class="article-card-summary">Agent Skills as an open standard for the Claude ecosystem.</div>
+        <a href="https://aibusiness.com/generative-ai/rivian-s-bet-on-ai-attracts-1-2b-uber-deal" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Rivian's Bet on AI Attracts $1.25 Billion Uber Deal</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 20, 2026</span></div>
+          <div class="article-card-summary">Strategic partnership validates AI-driven autonomous vehicle logistics strategy.</div>
         </a>
-        <a href="https://aibusiness.com/agentic-ai/google-labs-adds-agentic-ai-to-opal" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Google Labs Adds Agentic AI to Opal</div>
-          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
-          <div class="article-card-summary">Google expands agentic capabilities through Opal platform.</div>
+        <a href="https://aibusiness.com/generative-ai/google-s-stitch-and-ai-driven-development" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Google's Stitch and the Shift in AI-Driven Development</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">AI-powered UI generation framework automates interface and interaction development.</div>
         </a>
-        <a href="https://aibusiness.com/agentic-ai/new-microsoft-ai-agents-to-help-modernize-enterprises" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">New Microsoft AI Agents to Help Modernize Enterprises</div>
-          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
-          <div class="article-card-summary">Azure Copilot Migration Agent and GitHub Copilot modernization agent.</div>
+        <a href="https://aibusiness.com/agentic-ai/tencent-to-double-ai-spending-to-more-than-5b" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Tencent to Double AI Spending to More Than $5B Over Next Year</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">Massive capital commitment reflects competition for AI capability and infrastructure dominance.</div>
         </a>
-        <a href="https://aibusiness.com/agentic-ai/ai-innovation-and-adoption-are-misaligned" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">AI Innovation and Adoption Are Misaligned</div>
-          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
-          <div class="article-card-summary">Despite rapid innovation, enterprise adoption lags significantly.</div>
-        </a>
-        <a href="https://aibusiness.com/agentic-ai/servicenow-unveils-ai-experience-agentic-features" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">ServiceNow Unveils AI Experience with Agentic Features</div>
-          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 2026</span></div>
-          <div class="article-card-summary">ServiceNow integrates agentic AI across its IT service platform.</div>
+        <a href="https://aibusiness.com/generative-ai/samsung-pledges-73b-to-boost-ai-chip-standing" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">Samsung Pledges $73B to Boost AI Chip Standing</div>
+          <div class="article-card-meta"><span class="article-source">AI Business</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">Semiconductor giant invests heavily to compete in AI hardware manufacturing race.</div>
         </a>
       </div>
     </div>
@@ -658,35 +591,30 @@
           <span class="date-badge date-badge-week">This Week</span>
           <span class="date-group-label">March 16 – 23, 2026</span>
         </div>
-        <a href="https://www.infoq.com/news/2026/03/google-multi-agent/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Google Publishes Scaling Principles for Agentic Architectures</div>
-          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
-          <div class="article-card-summary">Predictive framework for scaling multi-agent systems.</div>
+        <a href="https://www.infoq.com/news/2026/03/aurora-dsql-playground-updates/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">AWS Expands Aurora DSQL with Playground, New Tool Integrations</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 22, 2026</span></div>
+          <div class="article-card-summary">AWS enhances its distributed SQL database with interactive playground and agentic integrations.</div>
         </a>
-        <a href="https://www.infoq.com/news/2026/03/open-ai-codex-spark/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">OpenAI Codex-Spark Achieves Ultra-Fast Coding on Cerebras</div>
-          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
-          <div class="article-card-summary">Codex-Spark runs on Cerebras for faster agentic coding.</div>
+        <a href="https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Stripe Engineers Deploy Minions: Autonomous Agents Producing Thousands of PRs Weekly</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 20, 2026</span></div>
+          <div class="article-card-summary">Autonomous agents at Stripe generate 1,300+ pull requests weekly, transforming development velocity.</div>
         </a>
-        <a href="https://www.infoq.com/news/2026/03/ai-coding-state/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">QCon London: AI Coding State of the Game</div>
-          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
-          <div class="article-card-summary">Shift from vibe coding to autonomous agent swarms.</div>
+        <a href="https://www.infoq.com/news/2026/03/morgan-stanley-apis-mcp-calm/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">QCon London 2026: Morgan Stanley Rethinks Its API Program for the MCP Era</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">Enterprise API architecture evolves to support Model Context Protocol and agentic workflows.</div>
         </a>
-        <a href="https://www.infoq.com/news/2026/03/retrieval-production-ai/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Reliable Retrieval for Production AI Systems</div>
-          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
-          <div class="article-card-summary">Rabobank reveals most RAG failures stem from indexing, not the LLM.</div>
+        <a href="https://www.infoq.com/news/2026/03/stale-code-intelligence/" target="_blank" rel="noopener" class="article-card animate-in">
+          <div class="article-card-title">QCon London 2026: Refreshing Stale Code Intelligence</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">Techniques for keeping code intelligence and semantic understanding current in large systems.</div>
         </a>
-        <a href="https://www.infoq.com/news/2026/03/cloudflare-crawler/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">Cloudflare Debuts Markdown for Agents</div>
-          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
-          <div class="article-card-summary">Markdown for Agents and Content Signals for AI crawlers.</div>
-        </a>
-        <a href="https://www.infoq.com/news/2026/03/hubspot-ai-code-review-agent/" target="_blank" rel="noopener" class="article-card animate-in">
-          <div class="article-card-title">HubSpot's Sidekick: AI Code Review Agent</div>
-          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 2026</span></div>
-          <div class="article-card-summary">90% faster PR feedback with AI code review.</div>
+        <a href="https://www.infoq.com/news/2026/03/claude-ai-firefox-vulnerability/" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">AI Model Discovers 22 Firefox Vulnerabilities in Two Weeks</div>
+          <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">AI-powered security research identifies critical browser vulnerabilities at unprecedented scale.</div>
         </a>
       </div>
     </div>
@@ -695,7 +623,7 @@
 
   <footer class="brief-footer">
     <div class="footer-rule"></div>
-    <p>AI Daily Brief | Published March 23, 2026 | 6 feeds, 38 articles</p>
+    <p>AI Daily Brief | Published March 23, 2026 | 6 feeds, 35 articles</p>
     <p style="margin-top: 0.75rem;"><a href="https://iajayr.com">&larr; Back to iajayr.com</a></p>
   </footer>
 
