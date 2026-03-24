@@ -295,13 +295,13 @@
 
     <div class="filter-toolbar">
       <nav class="tabs-nav" role="tablist">
-        <button class="tab-btn active" role="tab" onclick="switchTab('highlights')">Highlights <span class="tab-count">10</span></button>
+        <button class="tab-btn active" role="tab" onclick="switchTab('highlights')">Highlights <span class="tab-count">12</span></button>
         <button class="tab-btn" role="tab" onclick="switchTab('feed-ainews')">AI News <span class="tab-count">5</span></button>
+        <button class="tab-btn" role="tab" onclick="switchTab('feed-nate')">Nate B Jones <span class="tab-count">5</span></button>
         <button class="tab-btn" role="tab" onclick="switchTab('feed-sebastian')">Sebastian Raschka <span class="tab-count">4</span></button>
         <button class="tab-btn" role="tab" onclick="switchTab('feed-404media')">404 Media <span class="tab-count">7</span></button>
         <button class="tab-btn" role="tab" onclick="switchTab('feed-aibusiness')">AI Business <span class="tab-count">9</span></button>
         <button class="tab-btn" role="tab" onclick="switchTab('feed-infoq')">InfoQ AI/ML <span class="tab-count">8</span></button>
-        <button class="tab-btn" role="tab" onclick="switchTab('feed-nate')">Nate B Jones <span class="tab-count">5</span></button>
       </nav>
       <div class="filter-actions">
         <button class="new-filter-btn" onclick="toggleNewFilter()" title="Show only new articles from today">
@@ -512,6 +512,47 @@
       </div>
     </div>
 
+    <!-- ══════ NATE B JONES ══════ -->
+    <div id="feed-nate" class="tab-panel" role="tabpanel">
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-today">Today</span>
+          <span class="date-group-label">March 23 – 24, 2026</span>
+        </div>
+        <a href="https://natesnewsletter.substack.com/p/5-ai-agents-5-contradictory-bets" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">5 AI Agents, 5 Contradictory Bets, 3 Questions That Tell You Which One Fits</div>
+          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 23, 2026</span></div>
+          <div class="article-card-summary">Analyzes competing agent strategies from major tech companies through a practical three-axis evaluation framework.</div>
+        </a>
+      </div>
+      <div class="date-group">
+        <div class="date-group-header">
+          <span class="date-badge date-badge-week">This Week</span>
+          <span class="date-group-label">March 17 – 22, 2026</span>
+        </div>
+        <a href="https://natesnewsletter.substack.com/p/executive-briefing-your-systems-are" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Executive Briefing: 80% of What Makes Your Product Worth Buying Lives in People's Heads</div>
+          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 22, 2026</span></div>
+          <div class="article-card-summary">Agent-readiness requires clean data architecture — the barriers built to keep bots out now block valuable AI customers.</div>
+        </a>
+        <a href="https://natesnewsletter.substack.com/p/55-of-employers-regret-ai-driven" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">55% of Employers Regret AI-Driven Layoffs</div>
+          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 21, 2026</span></div>
+          <div class="article-card-summary">Distinguishes between task capability and sustained job performance — contextual stewardship is the missing piece.</div>
+        </a>
+        <a href="https://natesnewsletter.substack.com/p/your-ai-agent-needs-three-things" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">The Feature Nobody Covered: Your AI Memory System Just Became an Autonomous Agent</div>
+          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 20, 2026</span></div>
+          <div class="article-card-summary">Examines how combining memory, tools, and proactive execution creates genuine delegation capabilities.</div>
+        </a>
+        <a href="https://natesnewsletter.substack.com/p/perplexity-shipped-its-best-product" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
+          <div class="article-card-title">Most AI Companies Are Renting Their Position</div>
+          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 19, 2026</span></div>
+          <div class="article-card-summary">Reviews Perplexity Computer while analyzing the structural fragility of companies depending on competitors' models.</div>
+        </a>
+      </div>
+    </div>
+
     <!-- ══════ SEBASTIAN RASCHKA ══════ -->
     <div id="feed-sebastian" class="tab-panel" role="tabpanel">
       <div class="date-group">
@@ -706,47 +747,6 @@
           <div class="article-card-title">AI Model Discovers 22 Firefox Vulnerabilities in Two Weeks</div>
           <div class="article-card-meta"><span class="article-source">InfoQ AI/ML</span><span>March 19, 2026</span></div>
           <div class="article-card-summary">AI-powered security research identifies critical browser vulnerabilities at unprecedented scale.</div>
-        </a>
-      </div>
-    </div>
-
-    <!-- ══════ NATE B JONES ══════ -->
-    <div id="feed-nate" class="tab-panel" role="tabpanel">
-      <div class="date-group">
-        <div class="date-group-header">
-          <span class="date-badge date-badge-today">Today</span>
-          <span class="date-group-label">March 23 – 24, 2026</span>
-        </div>
-        <a href="https://natesnewsletter.substack.com/p/5-ai-agents-5-contradictory-bets" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
-          <div class="article-card-title">5 AI Agents, 5 Contradictory Bets, 3 Questions That Tell You Which One Fits</div>
-          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 23, 2026</span></div>
-          <div class="article-card-summary">Analyzes competing agent strategies from major tech companies through a practical three-axis evaluation framework.</div>
-        </a>
-      </div>
-      <div class="date-group">
-        <div class="date-group-header">
-          <span class="date-badge date-badge-week">This Week</span>
-          <span class="date-group-label">March 17 – 22, 2026</span>
-        </div>
-        <a href="https://natesnewsletter.substack.com/p/executive-briefing-your-systems-are" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
-          <div class="article-card-title">Executive Briefing: 80% of What Makes Your Product Worth Buying Lives in People's Heads</div>
-          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 22, 2026</span></div>
-          <div class="article-card-summary">Agent-readiness requires clean data architecture — the barriers built to keep bots out now block valuable AI customers.</div>
-        </a>
-        <a href="https://natesnewsletter.substack.com/p/55-of-employers-regret-ai-driven" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
-          <div class="article-card-title">55% of Employers Regret AI-Driven Layoffs</div>
-          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 21, 2026</span></div>
-          <div class="article-card-summary">Distinguishes between task capability and sustained job performance — contextual stewardship is the missing piece.</div>
-        </a>
-        <a href="https://natesnewsletter.substack.com/p/your-ai-agent-needs-three-things" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
-          <div class="article-card-title">The Feature Nobody Covered: Your AI Memory System Just Became an Autonomous Agent</div>
-          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 20, 2026</span></div>
-          <div class="article-card-summary">Examines how combining memory, tools, and proactive execution creates genuine delegation capabilities.</div>
-        </a>
-        <a href="https://natesnewsletter.substack.com/p/perplexity-shipped-its-best-product" target="_blank" rel="noopener" class="article-card animate-in" data-new="true">
-          <div class="article-card-title">Most AI Companies Are Renting Their Position</div>
-          <div class="article-card-meta"><span class="article-source">Nate B Jones</span><span>March 19, 2026</span></div>
-          <div class="article-card-summary">Reviews Perplexity Computer while analyzing the structural fragility of companies depending on competitors' models.</div>
         </a>
       </div>
     </div>
