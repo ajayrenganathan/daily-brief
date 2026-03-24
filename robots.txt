@@ -1,0 +1,11 @@
+# robots.txt for dailybrief.iajayr.com
+# AI Daily Brief — curated AI news digest
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dailybrief.iajayr.com/sitemap.xml
+
+# Crawl-delay suggestion for polite bots
+Crawl-delay: 2
